@@ -1,39 +1,117 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #F1F4FD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f1f4fd;
 }
 
 .container {
-    max-width: 1200px;
-    width: 95%;
+  max-width: 1200px;
+  width: 95%;
 }
+
+.container .slider-wrapper {
+    position: relative;
+}
+
+.slider-wrapper .slide-button {
+    height: 50px;
+    width: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #000;
+    font-size: 2.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transition: 0.2s;
+}
+
+.slider-wrapper .slide-button:hover {
+background-color: #444;
+}
+
+.slider-wrapper .slide-button#prev-slide {
+    left: -20px;
+    transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button#next-slide {
+    right: -20px;
+    transform: translateY(-50%);
+}
+
 
 .slider-wrapper .image-list {
-    display: grid;
-    gap: 18px;
-    font-size: 0;
-    overflow-x: auto;
-    scrollbar-width: none;
-    grid-template-columns: repeat(10, 1fr);
-
+  display: grid;
+  gap: 18px;
+  font-size: 0;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  grid-template-columns: repeat(10, 1fr);
 }
 
-.slider-wrapper .image-list::-webkit-scrollbar{
-    display: none;
-}
 
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
+}
 
 .slider-wrapper .image-list .image-item {
-    width: 325px;
-    height: 400px;
-    object-fit: cover;
+  width: 325px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.container .slider-scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slider-scrollbar .scrollbar-track {
+  height: 2px;
+  width: 100%;
+  background-color: #ccc;
+  position: relative;
+  border-radius: 4px;
+}
+
+.slider-scrollbar .scrollbar-track:hover {
+  height: 4px;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background-color: #000;
+  border-radius: inherit;
+  cursor: grab;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+  height: 8px;
+  top: -2px;
+  cursor: grabbing;
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: 0;
+  right: 0;
 }
