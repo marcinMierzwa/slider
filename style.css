@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f1f4fd;
+  background: linear-gradient(lightgray 60% , lightpink )
 }
 
 .container {
@@ -27,7 +27,7 @@ body {
     border: none;
     outline: none;
     color: #fff;
-    background-color: #000;
+    background-color: #d34b78;
     font-size: 2.2rem;
     cursor: pointer;
     border-radius: 50%;
@@ -39,7 +39,7 @@ body {
 }
 
 .slider-wrapper .slide-button:hover {
-background-color: #444;
+background-color: #d31b59;
 }
 
 .slider-wrapper .slide-button#prev-slide {
@@ -60,6 +60,8 @@ background-color: #444;
   overflow-x: auto;
   scrollbar-width: none;
   grid-template-columns: repeat(10, 1fr);
+  box-shadow: 0 2px 5px #000;
+
 }
 
 
@@ -72,6 +74,9 @@ background-color: #444;
   width: 325px;
   height: 400px;
   object-fit: cover;
+  box-shadow: 0 10px 5px #000;
+  border-radius: 5px;
+
 }
 
 .container .slider-scrollbar {
@@ -84,7 +89,7 @@ background-color: #444;
 .slider-scrollbar .scrollbar-track {
   height: 2px;
   width: 100%;
-  background-color: #ccc;
+  background-color: #fff;
   position: relative;
   border-radius: 4px;
 }
@@ -97,7 +102,7 @@ background-color: #444;
   position: absolute;
   height: 100%;
   width: 50%;
-  background-color: #000;
+  background-color: #d31b59;
   border-radius: inherit;
   cursor: grab;
 }
